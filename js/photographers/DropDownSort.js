@@ -1,10 +1,10 @@
 'use strict';
-/////////////////////////////////////////
+
 
 import GalleryFactory from '../Factory/GalleryFactory.js';
 
 export default class DropDownMenu {
-    // Events, open/close the dropDownMenu
+
     dropDown(data) {
         let arrowOpen = document.getElementsByClassName('sort-btn');
         let arrowClose = document.getElementsByClassName('arrow-up-close');
@@ -23,7 +23,7 @@ export default class DropDownMenu {
         }
     }
 
-    // SORT MEDIAS (POPULARITY, DATA, TITLE)
+
     sortMedias(data) {
         let mediaArraySort = [];
         let media = data.media;
@@ -36,21 +36,21 @@ export default class DropDownMenu {
             if (index == 0) {
                 btnSort.innerHTML = `Popularité`;
 
-                mediaArraySort = media.sort((a, b) => { // SORT BY POPULARITY  
+                mediaArraySort = media.sort((a, b) => { 
                     return b.likes - a.likes
                 })
 
             } else if (index == 1) {
                 btnSort.innerHTML = `Date`;
 
-                mediaArraySort = media.sort((a, b) => { // SORT BY DATE 
+                mediaArraySort = media.sort((a, b) => {  
                     return new Date(a.date).valueOf() - new Date(b.date).valueOf();
                 })
 
             } else if (index == 2) {
                 btnSort.innerHTML = `Titre`;
 
-                mediaArraySort = media.sort((a, b) => { // SORT BY TITLE
+                mediaArraySort = media.sort((a, b) => { 
                     if (a.photoName.toLowerCase() < b.photoName.toLowerCase()) {
                         return -1;
                     } else if (a.photoName.toLowerCase() > b.photoName.toLowerCase()) {
@@ -63,7 +63,7 @@ export default class DropDownMenu {
     }
 
     displaySortMedia(mediaArraySort) {
-        // DISPLAY PHOTOGRAPHERS WORKS WITH SORT
+
         document.getElementById("ph-works").innerHTML = "";
         new GalleryFactory().builder(mediaArraySort);
     }

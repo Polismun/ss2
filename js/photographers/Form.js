@@ -1,9 +1,9 @@
 'use strict';
-/////////////////////////////////////////
+
 
 export default class Form {
     fields() {
-        // DOM ELEMENTS FORM FIELDS VALIDATION
+
         let form = document.getElementById('contact-form');
         let firstName = document.getElementById('first-name');
         let lastName = document.getElementById('last-name');
@@ -11,7 +11,7 @@ export default class Form {
         let message = document.getElementById('message');
         const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 
-        // SEND FORM
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             let isValid = this.checkNames(firstName, regex) &&
@@ -48,7 +48,7 @@ export default class Form {
         this.checkMessage(message);
     }
 
-    // Check FirstName and LastName
+
     checkNames(elt, regex) {
         if (elt.value.trim().length < 2 || elt.value.trim() === "" || !elt.value.match(regex)) {
             elt.parentElement.setAttribute('data-error-visible', 'true');

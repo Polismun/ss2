@@ -1,8 +1,8 @@
 'use strict';
-/////////////////////////////////////////
+
 
 export default class Modal {
-    // Events, launch/close the modal by clicking on the 'contact me' button
+
     modal(data) {
         let modalBtn = document.getElementById("ph-contact");
         let closeBtn = document.getElementsByClassName('close-form-icon');
@@ -16,21 +16,21 @@ export default class Modal {
         }
     }
 
-    // LAUNCH MODAL
+
     launchModal() {
         let modalbg = document.getElementById("form-dialog");
 
         modalbg.style.display = 'block';
     }
 
-    // CLOSE MODAL
+
     closeModal() {
         let modalbg = document.getElementById("form-dialog");
 
         modalbg.style.display = 'none';
     }
 
-    // DISPLAY PH NAMES IN FORM
+
     formPhName(data) {
         let id = window.location.search.split('id=')[1];
         let photographers = !id ? data : data.filter(photographer => photographer.id == id);

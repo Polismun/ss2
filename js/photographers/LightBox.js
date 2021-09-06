@@ -1,12 +1,12 @@
 'use strict';
-/////////////////////////////////////////
+
 
 export default class LightBox {
     constructor() {
         this.currentIndex = 0;
     }
 
-    // initialize the lightbox when clicking on a media, call the functions allowing to navigate in the lightbox
+
     init(currentMedia, currentMediaName) {
         let getMedias = Array.from(document.getElementsByClassName('ph-media'));
         getMedias.forEach((mediaWorks, index) => mediaWorks.addEventListener("click", () => {
@@ -27,7 +27,7 @@ export default class LightBox {
         return this
     }
 
-    // return to previous media
+
     previous(elt, media, name) {
         elt.addEventListener('click', () => {
             this.currentIndex -= 1;
@@ -47,7 +47,7 @@ export default class LightBox {
         })
     }
 
-    // turn to the next media
+
     next(elt, media, name) {
         elt.addEventListener('click', () => {
             this.currentIndex += 1;
@@ -79,13 +79,13 @@ export default class LightBox {
             let lightBoxMedia = document.getElementById('works-lightbox-media');
             let lightBoxName = document.getElementById('works-lightbox-name');
 
-            // ESCAPE TO CLOSE
+
             if (key.code == "Escape") {
                 let lightBox = document.getElementById('works-lightbox');
                 lightBox.style.display = 'none';
             }
 
-            // ARROW RIGHT TO STEP RIGHT
+
             else if (key.code == "ArrowRight") {
                 this.currentIndex += 1;
 
@@ -100,7 +100,7 @@ export default class LightBox {
                 lightBoxName.innerHTML = `${nameSrc}`;
             }
 
-            // ARROW LEFT TO STEP LEFT
+
             else if (key.code == "ArrowLeft") {
                 this.currentIndex -= 1;
 

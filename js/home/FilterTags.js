@@ -1,14 +1,14 @@
 'use strict';
-/////////////////////////////////////////
 
-// FUNCTION FILTER TAGS
+
+
 export default class Filter {
-    // FILTER TAGS
+
     filterTags() {
         let filtres = document.querySelector('ul');
         let articles = document.querySelectorAll('.articlePh');
 
-        // EVENT LISTENER ON CLICK LI
+
         filtres.addEventListener('click', event => {
             let classValue = event.target.classList.value;
 
@@ -22,7 +22,7 @@ export default class Filter {
         });
     }
 
-    // retrieve the filters with the 'actived' class and place them in the 'filterSelected' array    
+ 
     getActiveFilters() {
         let currentFilters = document.querySelectorAll('ul li.actived');
         let filterSelected = [];
@@ -34,7 +34,7 @@ export default class Filter {
         return filterSelected;
     }
 
-    // compare/check if 'filters' has the same value as the 'article' class    
+
     ownAllFilters(article) {
         let filters = this.getActiveFilters();
         let classValue = article.classList.value;
@@ -46,7 +46,7 @@ export default class Filter {
         return filters.length == intersection.length;
     }
 
-    // SHOW OR HIDE ARTICLES
+
     sortDomArticle(articles) {
         articles.forEach((article) => {
             if (this.ownAllFilters(article)) {

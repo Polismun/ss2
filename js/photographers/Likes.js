@@ -1,8 +1,8 @@
 'use strict';
-/////////////////////////////////////////
+
 
 export default class LikeSubscriber {
-    // add or remove a 'like' when clicking on the 'like' icon   
+
     constructor() {
         let media = document.getElementById('ph-works');
 
