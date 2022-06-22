@@ -19,6 +19,9 @@ export default class LightBox {
             document.getElementById('works-lightbox').style.display = 'block';
             lightBoxMedia.innerHTML = `${src}`;
             lightBoxName.innerHTML = `${nameSrc}`;
+            lightBoxMedia
+            .getElementsByTagName("video")[0]
+            .setAttribute("controls",true);
         }))
         this.previous(document.querySelector('.left-arrow-lightbox'), currentMedia, currentMediaName);
         this.next(document.querySelector('.right-arrow-lightbox'), currentMedia, currentMediaName);
@@ -44,6 +47,9 @@ export default class LightBox {
 
             lightBoxMedia.innerHTML = `${src}`;
             lightBoxName.innerHTML = `${nameSrc}`;
+            lightBoxMedia
+            .getElementsByTagName("video")[0]
+            .setAttribute("controls",true);
         })
     }
 
@@ -63,6 +69,9 @@ export default class LightBox {
 
             lightBoxMedia.innerHTML = `${src}`;
             lightBoxName.innerHTML = `${nameSrc}`;
+            lightBoxMedia
+            .getElementsByTagName("video")[0]
+            .setAttribute("controls",true);
         })
     }
 
@@ -98,6 +107,9 @@ export default class LightBox {
 
                 lightBoxMedia.innerHTML = `${src}`;
                 lightBoxName.innerHTML = `${nameSrc}`;
+                lightBoxMedia
+            .getElementsByTagName("video")[0]
+            .setAttribute("controls",true);
             }
 
 
@@ -114,6 +126,9 @@ export default class LightBox {
 
                 lightBoxMedia.innerHTML = `${src}`;
                 lightBoxName.innerHTML = `${nameSrc}`;
+                lightBoxMedia
+            .getElementsByTagName("video")[0]
+            .setAttribute("controls",true);
             }
         });
     }
