@@ -24,7 +24,7 @@ export default class Filter {
 
  
     getActiveFilters() {
-        let currentFilters = document.querySelectorAll('ul li.actived');
+        let currentFilters = document.querySelectorAll("ul li a.actived");
         let filterSelected = [];
 
         currentFilters.forEach(function (currentFilter) {

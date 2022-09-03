@@ -13,13 +13,14 @@ html {
     font-family: 'DM Sans', sans-serif;
 }
 
-nav ul li:hover,
-li.actived {
+nav ul li a:hover,
+a.actived {
     background-color: #901C1C;
     color: #fff;
+    cursor: pointer;
 }
 
-ul li {
+ul li a {
     border: .5px solid #C4C4C4;
     border-radius: 11px;
     color: #901C1C;
@@ -30,4 +31,9 @@ ul li {
     padding: .0625rem .375rem;
     text-decoration: none;
     transition: all .2s;
+}
+ul li
+{
+    text-decoration: none;
+    list-style: none;
 }
